@@ -2,7 +2,7 @@
   "name": "csc510-rest-workshop",
   "version": "1.0.0",
   "description": "Practice with REST concepts.",
-  "scripts":{
+  "scripts": {
     "test": "mocha --reporter spec"
   },
   "main": "index.js",
