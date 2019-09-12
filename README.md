@@ -3,10 +3,10 @@ Link to screencast : https://drive.google.com/file/d/1V4LJQxaMjci93xR8XeZECsPTVf
 
 ###client tests
 
-![](/Images/client.png)
+![](/Images/client.PNG)
 
 
 
 ###server tests
 
-![](/Images/server.png)
+![](/Images/server.PNG)
