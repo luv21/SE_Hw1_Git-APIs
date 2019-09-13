@@ -1,0 +1,52 @@
+Q1)Explain some additional concerns related to using REST apis.
+
+Some Concerns with the REST API’s are:
+Security Concerns
+1)Instead of using complex technology like CORBA, web services, RPC, etc., it uses simple HTTP for communication between machines. Some APIs support HTTPS only. Thus, RESTful services are subject to all the application layer security vulnerabilities that traditional web applications have had to deal with over the years (e.g. OWASP Top 10, etc).
+
+2) Some REST frameworks also intend to implement Verb Based Authentication and Authorization Control (VBAAC) – where different access constraints are bound to different HTTP methods (verbs).
+
+Chatty Nature
+That APIs are accessed programmatically is obvious. Another aspect to RESTful applications is their “chatty” nature. A RESTful service invokes granular operations that return simple data about resources, unlike complex, hierarchical information returned in web services. While this means that REST can obtain precise information that is needed, it also means that several more calls are needed to get the same information as compared to web services and applications.
+
+
+The REST vocabulary is not fully supported
+Most client and server applications don’t support all verbs or response codes for the HTTP protocol. For example, most web browsers have limited support for PUT or DELETE. And many server applications often don’t properly support these methods either.
+
+RESTful APIs are very hard to debug
+RESTful API’s are almost impossible to debug because you have to look at multiple locations like Request Method , Response Code , Request Path and other things.
+
+
+Challenges in Securing REST
+
+a) Hard to Determine the Attack Surface (URL space)
+b)Lack of out-of-band API metadata to guide
+c)Hard to Determine Navigation Paths and User Input Locations
+d)Lengthy test cycles
+
+2) Compare and contrast the benefits and disadvantages of using a RESTful architecture vs. a graph query language. See http://graphql.org/ for details.
+REST and GraphQL are two ways to send data over HTTP. The REST-based approach is the traditional way of doing so and has gained a very high adoption rate in many application stacks in the last years. GraphQL is often presented as a revolutionary new way to think about APIs. Indeed GraphQL is able to overcome major shortcomings of REST.
+
+Disadvantages of REST
+REST (Representational State Transfer) is an API design architecture used to implement web services. REST-compliant web services allow the requesting systems to access and manipulate textual representations of web resources by using a uniform and predefined set of stateless operations. When HTTP is used, the most common operations available are GET, POST, PUT, and DELETE.
+The core concept of REST is that everything is a resource. While REST was a great solution when it was first proposed, there are some pretty significant issues that the architecture suffers from right now. Let’s explore some of the most significant limitations of REST today:
+Multiple Round Trips To Fetch Related Resources
+With a REST API, you would typically gather the data by accessing multiple endpoints. In the example, these could be /users/<id> endpoint to fetch the initial user data. Secondly, there’s likely to be a /users/<id>/posts endpoint that returns all the posts for a user. The third endpoint will then be the /users/<id>/followers that returns a list of followers per user
+.
+Rapid Product Iterations on the Frontend
+A common pattern with REST APIs is to structure the endpoints according to the views that you have inside your app. This is handy since it allows for the client to get all required information for a particular view by simply accessing the corresponding endpoint.
+
+The major drawback of this approach is that it doesn’t allow for rapid iterations on the frontend. With every change that is made to the UI, there is a high risk that now there is more (or less) data required than before. Consequently, the backend needs to be adjusted as well to account for the new data needs. This kills productivity and notably slows down the ability to incorporate user feedback into a product.
+With GraphQL, this problem is solved. Thanks to the flexible nature of GraphQL, changes on the client-side can be made without any extra work on the server. Since clients can specify their exact data requirements, no backend engineer needs to make adjustments when the design and data needs on the frontend change.
+
+Over Fetching / Under Fetching
+Another common problem which occurs when using RESTful services is the problem of over / under fetching. So what does that exactly mean? Let’s get back to the previous example. By using endpoint mydomain.com/posts/:id we’re fetching data for a specific post. Each post might comprise the following properties: id, title, user, and body. You’ll always get back the complete set of data. There is no way to limit the response to only contain a subset of data like title and user.
+
+Some Advantages of REST over GraphQL
+1.	REST can do much of what GraphQL does
+2.	GraphQL will make some tasks more complex
+3.	It’s easier to use a web cache with REST than with GraphQL
+4.	You could have performance issues with GraphQL queries
+5.	The way GraphQL schemas work could be a problem
+
+
